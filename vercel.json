@@ -7,9 +7,17 @@
       }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/browser/index.html"
-      }
-    ]
+    {
+      "src": "/_next/static/(.*)",
+      "dest": "/browser/_next/static/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|ico|png|svg|woff2))",
+      "dest": "/browser/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/browser/index.html"
+    }
+  ]
   }
